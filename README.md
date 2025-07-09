@@ -1,7 +1,5 @@
 # GeoSpectre AI Assistant
 
-![App Screenshot](screenshot.png)
-
 **GeoSpectre** is an AI-powered geospatial assistant that provides interactive maps and actionable insights for:
 - Flood Risk
 - Fire Danger
@@ -13,26 +11,26 @@ It uses **real satellite and terrain data** from OpenTopography and other source
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🌐 Real-Time Satellite Integration via OpenTopography API
-- 🌊 Flood Risk Mapping using elevation and rainfall factors
-- 🔥 Fire Danger Analysis based on terrain and temperature
-- 🗻 Elevation Visualizations with heatmaps and contours
-- 🌾 Farming Suitability Checks for specific regions
-- 🏙️ Population Density & Urban Planning Insights
-- 💬 Conversational AI Interface with natural language queries
-- 🗺️ Interactive Maps rendered with Folium and Streamlit
-
----
-
-## 🖼️ App UI Preview
-
-![Architecture Diagram](architecture.png)
+- Real-Time Satellite Integration via OpenTopography API
+- Flood Risk Mapping using elevation and rainfall factors
+- Fire Danger Analysis based on terrain and temperature
+- Elevation Visualizations with heatmaps and contours
+- Farming Suitability Checks for specific regions
+- Population Density & Urban Planning Insights
+- Conversational AI Interface with natural language queries
+- Interactive Maps rendered with Folium and Streamlit
 
 ---
 
-## 🛠️ Tech Stack
+## App UI Preview
+
+![App Screenshot](screenshot.png)
+
+---
+
+## Tech Stack
 
 - **Frontend**: Streamlit
 - **Geospatial Visualization**: Folium, Plotly
@@ -41,29 +39,29 @@ It uses **real satellite and terrain data** from OpenTopography and other source
 
 ---
 
-## 🔍 Core Functionalities
+## Core Functionalities
 
-### 💬 Chat-Driven Analysis
+### Chat-Driven Analysis
 Example prompts:
 - "Show me flood risk areas in Kerala with rainfall data"
 - "Create a fire danger map for California forests"
 - "Find best farming areas in Punjab"
 
-### 🌐 Data Fetching
+### Data Fetching
 - Fetch DEM (Digital Elevation Model) via OpenTopography API
 - Generate synthetic elevation if real DEM is unavailable
 
-### ⚠️ Risk Analysis
+### Risk Analysis
 - **Flood Risk**: Based on elevation & rainfall factor
 - **Fire Danger**: Based on elevation & temperature factor
 
-### 🗺️ Map Rendering
+### Map Rendering
 - Folium-based heatmaps and circle markers
 - Risk-level color codes with interactive popups and legends
 
 ---
 
-## 🌎 Supported Cities
+## Supported Cities
 
 Supports 40+ cities (Indian and global):
 - Mumbai, Delhi, Kerala, Bengaluru, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Lucknow...
@@ -81,15 +79,8 @@ Supports 40+ cities (Indian and global):
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    A[User Chat Input] --> B[NLP-based Prompt Detection]
-    B --> C[Location + Analysis Type Extraction]
-    C --> D[Elevation Data Fetch (API or Simulated)]
-    D --> E[Risk Analysis (Flood/Fire/etc)]
-    E --> F[Map Visualization (Folium)]
-    F --> G[Streamlit Display + UI]
-```
+![Architecture Diagram](architecture.png)
+
 
 ---
 
