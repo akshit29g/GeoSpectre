@@ -79,7 +79,11 @@ Supports 40+ cities (Indian and global):
 
 ## Architecture
 
-![Architecture Diagram](architecture.png)
+<img src="architecture.png" alt="Architecture Diagram" width="250"/>
+
+
+
+
 
 
 ---
