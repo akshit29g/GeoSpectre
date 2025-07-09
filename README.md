@@ -1,80 +1,87 @@
-GeoSpectre AI Assistant
-GeoSpectre is an AI-powered geospatial assistant that provides interactive maps and actionable insights for flood risk, fire danger, elevation analysis, and more — all using real satellite and terrain data.
+# GeoSpectre AI Assistant
 
-<!-- Add this image in your repo root folder -->
+![App Screenshot](screenshot.png)
 
-Features
-Real-Time Satellite Integration with OpenTopography API
+**GeoSpectre** is an AI-powered geospatial assistant that provides interactive maps and actionable insights for:
+- Flood Risk
+- Fire Danger
+- Elevation Analysis
+- Farming Suitability
+- Population Density
 
-Flood Risk Mapping using elevation and rainfall factors
+It uses **real satellite and terrain data** from OpenTopography and other sources.
 
-Fire Danger Analysis based on terrain and temperature
+---
 
-Elevation Visualizations with heatmaps and contours
+## 🚀 Features
 
-Farming Suitability Checks for specific regions
+- 🌐 Real-Time Satellite Integration via OpenTopography API
+- 🌊 Flood Risk Mapping using elevation and rainfall factors
+- 🔥 Fire Danger Analysis based on terrain and temperature
+- 🗻 Elevation Visualizations with heatmaps and contours
+- 🌾 Farming Suitability Checks for specific regions
+- 🏙️ Population Density & Urban Planning Insights
+- 💬 Conversational AI Interface with natural language queries
+- 🗺️ Interactive Maps rendered with Folium and Streamlit
 
-Population Density & Urban Planning Insights
+---
 
-Conversational AI Interface with natural language requests
+## 🖼️ App UI Preview
 
-Interactive Maps rendered with Folium and Streamlit
+![Architecture Diagram](architecture.png)
 
-App UI Preview
+---
 
+## 🛠️ Tech Stack
 
+- **Frontend**: Streamlit
+- **Geospatial Visualization**: Folium, Plotly
+- **Data Sources**: OpenTopography API, Weather APIs, Census, Land Use Data
+- **Language**: Python
 
-Tech Stack
-Frontend: Streamlit
+---
 
-Geospatial Processing: Folium, Plotly
+## 🔍 Core Functionalities
 
-Data Sources: OpenTopography API, Weather, Census, Land Use
+### 💬 Chat-Driven Analysis
+Example prompts:
+- "Show me flood risk areas in Kerala with rainfall data"
+- "Create a fire danger map for California forests"
+- "Find best farming areas in Punjab"
 
-Language: Python
+### 🌐 Data Fetching
+- Fetch DEM (Digital Elevation Model) via OpenTopography API
+- Generate synthetic elevation if real DEM is unavailable
 
-Core Functionalities
-Chat-Driven Analysis
-bash
-Copy
-Edit
-"Show me flood risk areas in Kerala with rainfall data"
-"Create a fire danger map for California forests"
-"Find best farming areas in Punjab"
-Data Fetching
-Fetch DEM (Digital Elevation Model) using OpenTopography API
+### ⚠️ Risk Analysis
+- **Flood Risk**: Based on elevation & rainfall factor
+- **Fire Danger**: Based on elevation & temperature factor
 
-Generate synthetic sample elevation where real DEM is not available
+### 🗺️ Map Rendering
+- Folium-based heatmaps and circle markers
+- Risk-level color codes with interactive popups and legends
 
-Risk Analysis
-Flood Risk: Based on elevation and rainfall factor
+---
 
-Fire Danger: Based on elevation and temperature factor
+## 🌎 Supported Cities
 
-Map Rendering
-Folium-based heatmaps and circle markers
+Supports 40+ cities (Indian and global):
+- Mumbai, Delhi, Kerala, Bengaluru, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Lucknow...
+- (Full list implemented using keyword-to-coordinates matching)
 
-Risk-level color codes and legends
+---
 
-Supported Cities
-Supports location-specific analysis for 40+ Indian and global cities including:
+## Export & Share
 
-Copy
-Edit
-Mumbai, Delhi, Kerala, Bengaluru, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Lucknow...
-(Full list implemented via keyword-to-coordinates matching in the code.)
+- Download generated map
+- Placeholder: Shareable link & map editing
+- Planned: Export to GeoTIFF / SHP
 
-Export & Share
-Download generated map
+---
 
-Share links (placeholder)
+## Architecture
 
-Edit map feature (planned)
-
-Architecture
-mermaid
-Copy
-Edit
+```mermaid
 flowchart TD
     A[User Chat Input] --> B[NLP-based Prompt Detection]
     B --> C[Location + Analysis Type Extraction]
@@ -82,23 +89,23 @@ flowchart TD
     D --> E[Risk Analysis (Flood/Fire/etc)]
     E --> F[Map Visualization (Folium)]
     F --> G[Streamlit Display + UI]
-About the AI
-The GeoSpectreAI class encapsulates:
+```
 
-Elevation Data Fetching
+---
 
-Risk Analysis Models
+## About the AI
 
-Interactive Map Generator
+The `GeoSpectreAI` class handles:
+- Elevation Data Fetching
+- Risk Analysis Models
+- Interactive Map Generation
 
-Future Work
-Integration with QGIS / GDAL
+---
 
-Improved Prompt Interpretation using LLMs
+## Future Work
 
-Rainfall + Terrain Overlays
-
-Export to GeoTIFF / SHP
-
-LangChain-based geospatial chains
-
+- QGIS / GDAL Integration
+- Better Prompt Understanding using LLMs
+- Rainfall + Terrain Overlay Enhancements
+- Export to GeoTIFF / SHP formats
+- LangChain-based geospatial task chains
